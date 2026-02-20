@@ -1,0 +1,165 @@
+﻿
+> khatha@0.0.0 lint
+> eslint .
+
+
+C:\Users\ASUS\OneDrive\Desktop\wallet\khatha book\khatha\src\App.jsx
+  10:11  error  't' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\ASUS\OneDrive\Desktop\wallet\khatha book\khatha\src\Billing.jsx
+  37:5  error    Error: Cannot access variable before it is declared
+
+`loadCustomers` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  35 |   /* ================= LOAD DATA ================= */
+  36 |   useEffect(() => {
+> 37 |     loadCustomers();
+     |     ^^^^^^^^^^^^^ `loadCustomers` accessed before it is declared
+  38 |     loadProducts();
+  39 |   }, []);
+  40 |
+
+  39 |   }, []);
+  40 |
+> 41 |   const loadCustomers = async () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 42 |     const res = await getCustomers();
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 43 |     setCustomers(res.data || []);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 44 |   };
+     | ^^^^^ `loadCustomers` is declared here
+  45 |
+  46 |   const loadProducts = async () => {
+  47 |     const res = await getProducts(retailerId);              react-hooks/immutability
+  38:5  error    Error: Cannot access variable before it is declared
+
+`loadProducts` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  36 |   useEffect(() => {
+  37 |     loadCustomers();
+> 38 |     loadProducts();
+     |     ^^^^^^^^^^^^ `loadProducts` accessed before it is declared
+  39 |   }, []);
+  40 |
+  41 |   const loadCustomers = async () => {
+
+  44 |   };
+  45 |
+> 46 |   const loadProducts = async () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 47 |     const res = await getProducts(retailerId);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 48 |     setProducts(res.data || []);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 49 |   };
+     | ^^^^^ `loadProducts` is declared here
+  50 |
+  51 |   /* ================= BILL ITEMS ================= */
+  52 |   const addProductToBill = (product) => {  react-hooks/immutability
+  39:6  warning  React Hook useEffect has a missing dependency: 'loadProducts'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               react-hooks/exhaustive-deps
+
+C:\Users\ASUS\OneDrive\Desktop\wallet\khatha book\khatha\src\Dashboard.jsx
+  70:5   error  Error: Cannot access variable before it is declared
+
+`loadCustomers` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  68 |   /* ================= LOAD CUSTOMERS ================= */
+  69 |   useEffect(() => {
+> 70 |     loadCustomers();
+     |     ^^^^^^^^^^^^^ `loadCustomers` accessed before it is declared
+  71 |   }, []);
+  72 |
+  73 |   const loadCustomers = async () => {
+
+  71 |   }, []);
+  72 |
+> 73 |   const loadCustomers = async () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 74 |     const res = await getCustomers();
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 75 |     setCustomers(res.data || []);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 76 |   };
+     | ^^^^^ `loadCustomers` is declared here
+  77 |
+  78 |   /* ================= LOAD BILLS ================= */
+  79 |   useEffect(() => {                                                                                                                                            react-hooks/immutability
+  81:5   error  Error: Cannot access variable before it is declared
+
+`loadBills` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  79 |   useEffect(() => {
+  80 |     if (!selectedCustomer?.id) return;
+> 81 |     loadBills(selectedCustomer.id);
+     |     ^^^^^^^^^ `loadBills` accessed before it is declared
+  82 |   }, [selectedCustomer?.id]);
+  83 |
+  84 |   const loadBills = async (customerId) => {
+
+  82 |   }, [selectedCustomer?.id]);
+  83 |
+> 84 |   const loadBills = async (customerId) => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 85 |     const res = await getBillsByCustomer(customerId);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 86 |     setBills(res.data || []);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 87 |   };
+     | ^^^^^ `loadBills` is declared here
+  88 |
+  89 |   /* ================= CALCULATIONS ================= */
+  90 |   const totalGave = customers.reduce((s, c) => s + (c.dueAmount || 0), 0);  react-hooks/immutability
+  96:58  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  94 |   /* ================= BILLING CHART DATA ================= */
+  95 |   const billingChartData = bills.reduce((acc, bill) => {
+> 96 |     const date = new Date(bill.date || bill.createdAt || Date.now());
+     |                                                          ^^^^^^^^^^ Cannot call impure function
+  97 |     const month = date.toLocaleString("default", { month: "short" });
+  98 |
+  99 |     const existing = acc.find((item) => item.month === month);                                                                                                                                                                                                                                                        react-hooks/purity
+
+C:\Users\ASUS\OneDrive\Desktop\wallet\khatha book\khatha\src\NotificationToast.jsx
+  6:3  error  React Hook "useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?  react-hooks/rules-of-hooks
+
+C:\Users\ASUS\OneDrive\Desktop\wallet\khatha book\khatha\src\PaymentModal.jsx
+  24:14  error  'err' is defined but never used  no-unused-vars
+
+C:\Users\ASUS\OneDrive\Desktop\wallet\khatha book\khatha\src\Products.jsx
+   44:5   error    Error: Cannot access variable before it is declared
+
+`loadProducts` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  42 |
+  43 |   useEffect(() => {
+> 44 |     loadProducts();
+     |     ^^^^^^^^^^^^ `loadProducts` accessed before it is declared
+  45 |   }, []);
+  46 |
+  47 |   const loadProducts = async () => {
+
+  45 |   }, []);
+  46 |
+> 47 |   const loadProducts = async () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 48 |     const res = await axiosClient.get("/products", {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 49 |       params: { retailerId }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 50 |     });
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 51 |     setProducts(res.data || []);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 52 |   };
+     | ^^^^^ `loadProducts` is declared here
+  53 |
+  54 |   const addProduct = async () => {
+  55 |     const { name, price, productType, category, boxes } = newProduct;  react-hooks/immutability
+   45:6   warning  React Hook useEffect has a missing dependency: 'loadProducts'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   react-hooks/exhaustive-deps
+  299:14  error    'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+
+Γ£û 12 problems (10 errors, 2 warnings)
+

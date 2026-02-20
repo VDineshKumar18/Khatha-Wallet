@@ -1,0 +1,32 @@
+button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button:hover {
+    background: var(--primary-hover);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Optional button variants */
+  .btn-danger {
+    background: var(--danger);
+  }
+  
+  .btn-success {
+    background: var(--success);
+  }
+  

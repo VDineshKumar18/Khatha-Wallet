@@ -1,0 +1,26 @@
+:root {
+    /* Colors */
+    --primary: #2563eb;
+    --primary-hover: #1e40af;
+    --success: #16a34a;
+    --danger: #dc2626;
+  
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-muted: #f1f5f9;
+  
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+  
+    --border: #e5e7eb;
+  
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+  
+    /* Shadow */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08);
+  }
+  

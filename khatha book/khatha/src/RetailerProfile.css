@@ -1,0 +1,338 @@
+/* Main Container */
+.profile-container {
+    max-width: 1200px;
+    /* Wider for desktop view */
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+}
+
+/* Header / Cover Section */
+.profile-cover {
+    height: 180px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    /* Fully rounded corners since no overlap */
+    position: relative;
+    margin-bottom: 24px;
+    /* Reduced margin since avatar is inside */
+    display: flex;
+    align-items: center;
+    /* Vertical center */
+    padding: 0 40px;
+    /* Horizontal padding */
+}
+
+.profile-header-content {
+    position: static;
+    /* Let flexbox handle it */
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    pointer-events: auto;
+}
+
+.profile-avatar-large {
+    width: 100px;
+    /* Slightly smaller to fit nicely */
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    /* Semi-transparent border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    flex-shrink: 0;
+    position: static;
+    /* Reset absolute */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.profile-info-basic {
+    position: static;
+    /* Reset absolute */
+    text-align: left;
+    color: white;
+    z-index: 1;
+}
+
+.profile-info-basic h1 {
+    margin: 0;
+    font-size: 28px;
+    color: white;
+    font-weight: 800;
+    text-shadow: none;
+    /* Clean look */
+}
+
+.profile-info-basic p {
+    margin: 4px 0 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Main Grid Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    /* Adjusted ratio */
+    gap: 24px;
+}
+
+/* Common Card Style */
+.detail-card,
+.location-card,
+.payment-card {
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    /* Increased padding */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Form Styling */
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* Increased gap */
+}
+
+/* New Row Class */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    /* Ensure width */
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.2s;
+    background: #f8fafc;
+    width: 100%;
+    /* Fix width */
+    box-sizing: border-box;
+    /* IMPORTANT */
+    color: #334155;
+    font-weight: 500;
+}
+
+.form-group input:focus {
+    background: white;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+
+.read-only {
+    opacity: 0.7;
+    cursor: default;
+}
+
+/* Specific Section Styles */
+.location-card,
+.payment-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    /* Spacing between right column cards */
+}
+
+/* Buttons */
+.detect-btn {
+    width: 100%;
+    padding: 10px;
+    background: #eff6ff;
+    color: #3b82f6;
+    border: 1px dashed #3b82f6;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.detect-btn:hover {
+    background: #dbeafe;
+}
+
+/* Old floating button styles removed - now handled in common block */
+
+.back-btn-abs {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-btn-abs:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Loading */
+.loading-screen {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-cover {
+        padding: 0 20px;
+        height: auto;
+        min-height: 120px;
+        padding-top: 60px;
+        /* Space for back button */
+        padding-bottom: 20px;
+        display: block;
+        /* Stack on mobile if needed, or keep flex */
+    }
+
+    .profile-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .profile-avatar-large {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-info-basic h1 {
+        font-size: 22px;
+    }
+}
+
+/* Floating Action Buttons Container */
+.action-buttons-floating {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    z-index: 100;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Base Floating Button */
+.save-btn-floating,
+.edit-btn-floating,
+.cancel-btn-floating {
+    position: static;
+    /* Controlled by container */
+    padding: 14px 28px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.save-btn-floating {
+    background: #3b82f6;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+}
+
+.edit-btn-floating {
+    background: #2563eb;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+}
+
+.cancel-btn-floating {
+    background: white;
+    color: #ef4444;
+    border: 2px solid #fee2e2;
+}
+
+.save-btn-floating:hover,
+.edit-btn-floating:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.5);
+}
+
+.cancel-btn-floating:hover {
+    background: #fef2f2;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn-floating:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}

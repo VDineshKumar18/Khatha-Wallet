@@ -1,0 +1,101 @@
+.billing-page {
+  max-width: 900px;
+  margin: auto;
+}
+
+.back-btn {
+  background: #f1f5f9;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.billing-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.billing-card h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group select {
+  width: 250px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.product-grid button {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #f8fafc;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.product-grid span {
+  display: block;
+  font-size: 13px;
+  color: #475569;
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+.bill-table {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.bill-table th, .bill-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.bill-table button {
+  padding: 4px 8px;
+  margin: 0 4px;
+}
+
+.total-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin: 16px 0;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+}

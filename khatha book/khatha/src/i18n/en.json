@@ -1,0 +1,27 @@
+{
+    "common": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "back": "Back",
+      "search": "Search",
+      "logout": "Logout"
+    },
+    "auth": {
+      "login": "Login",
+      "phone": "Phone Number",
+      "otp": "Enter OTP"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "billing": "Billing",
+      "customers": "Customers",
+      "reports": "Reports"
+    },
+    "billing": {
+      "title": "Billing",
+      "saveBill": "Save Bill",
+      "subtotal": "Subtotal",
+      "total": "Total"
+    }
+  }
+  

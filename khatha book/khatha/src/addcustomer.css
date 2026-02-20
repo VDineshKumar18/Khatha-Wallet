@@ -1,0 +1,55 @@
+/* ================= ADD CUSTOMER ================= */
+
+.add-customer-card {
+    background: white;
+    padding: 32px;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+  
+  .add-customer-card h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 24px;
+  }
+  
+  .add-customer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  .add-customer-grid input {
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+  }
+  
+  .add-customer-grid input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+  }
+  
+  .add-customer-actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .add-customer-actions button {
+    background: #2563eb;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 14px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .add-customer-actions button:hover {
+    background: #1d4ed8;
+  }
+  

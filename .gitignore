@@ -1,0 +1,32 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.log
+
+# Node
+node_modules/
+dist/
+build/
+.env*
+!.env.development
+!.env.production
+
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test results
+playwright-report/
+test-results/
+cypress/videos/
+cypress/screenshots/
+test-results/

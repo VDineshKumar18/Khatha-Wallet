@@ -1,0 +1,8 @@
+{
+    "type": "SALE",
+    "amount": 120.0,
+    "paidAmount": 120.0,
+    "paymentMode": "CASH",
+    "items": "WHEAT-1205010 x1",
+    "loyaltyPointsUsed": 0
+}

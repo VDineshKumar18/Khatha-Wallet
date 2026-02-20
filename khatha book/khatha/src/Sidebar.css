@@ -1,0 +1,116 @@
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  /* Allow growth */
+  background: linear-gradient(180deg, #1e3a8a, #2563eb);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  position: relative;
+  flex-shrink: 0;
+  /* Don't shrink */
+}
+
+
+/* LOGO AREA */
+.sidebar-brand-container {
+  padding: 8px 12px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-logo {
+  height: 120px;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.sidebar-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-menu button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sidebar-menu button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-menu button.active {
+  background: white;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.sidebar-footer button {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: rgba(239, 68, 68, 0.85);
+}
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1e3a8a, #2563eb);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  /* ❌ NOT FIXED */
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* ================= MOBILE SIDEBAR OVERLAY ================= */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+    width: 280px;
+    /* Slightly wider for better touch targets */
+  }
+
+  /* Overlay Backdrop handled in Dashboard.jsx or pseudo-element */
+}
