@@ -125,8 +125,8 @@ mvn spring-boot:run
 
 ## 👨‍💻 Team
 
-**Vaddadi Dinesh Kumar**
-**K Ajay NITHIN **
+**Vaddadi Dinesh Kumar** and
+**K Ajay Nithin**
 
 - B.Tech CSE, KL University
 - GitHub: https://github.com/VDineshKumar18
