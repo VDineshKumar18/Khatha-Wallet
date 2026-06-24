@@ -76,7 +76,7 @@ npm run dev
 * Analytics Dashboard
 
 ## Team 
-Vaddadi Dinesh Kumar
-K Ajay Nithin
+**Vaddadi Dinesh Kumar** and 
+**K Ajay Nithin**
 
 B.Tech Computer Science, KL University
