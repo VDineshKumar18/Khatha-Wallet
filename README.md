@@ -48,7 +48,8 @@ The application allows retailers to:
 - Java
 
 ### Database
-- MySQL / MongoDB (Update according to your project)
+- PostgreSQL
+  
 
 ---
 
@@ -100,28 +101,6 @@ mvn spring-boot:run
 
 ---
 
-## 📷 Screenshots
-
-Add screenshots of:
-
-- Login Page
-- Dashboard
-- Customer List
-- Transaction Page
-- Balance Summary
-
-Example:
-
-```
-screenshots/
-├── login.png
-├── dashboard.png
-├── customers.png
-└── transactions.png
-```
-
----
-
 ## 🔄 Workflow
 
 1. Retailer logs into the system.
@@ -144,9 +123,10 @@ screenshots/
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Team
 
 **Vaddadi Dinesh Kumar**
+**K Ajay NITHIN **
 
 - B.Tech CSE, KL University
 - GitHub: https://github.com/VDineshKumar18
